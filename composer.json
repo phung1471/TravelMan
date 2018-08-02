@@ -1,0 +1,17 @@
+{
+  "name": "phung1471/travel-man",
+  "description": "Find the shortest path",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Duong Phi Phung",
+      "email": "phung1470@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}
