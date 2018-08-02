@@ -3,7 +3,7 @@ try {
   if (! @include_once( __DIR__ . '/vendor/autoload.php' )) {
 	  throw new Exception ('Autoload error');
   }
-//	include_once __DIR__ . '/vendor/autoloasd.php';
+
 } catch (\Exception $e) {
 	echo <<<HTML
 <div style="color: red; border: 1px solid black; text-align: center;">
@@ -13,3 +13,5 @@ try {
 HTML;
 	exit(1);
 }
+
+require_once __DIR__ . '/src/template.php';

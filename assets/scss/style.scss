@@ -1,0 +1,34 @@
+body {
+  font-size: 13px;
+  font-family: sans-serif;
+  border: 1px solid;
+  height: 100vh;
+  padding: 20px;
+  background-color: #e3e3e3;
+
+  .error-notification {
+    border: 1px solid;
+    color: #f00000;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .upload-file {
+    border: 1px solid #000;
+    padding: 20px;
+
+    form {
+      .form-field {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .shortest-path {
+
+  }
+
+  .list-City {
+
+  }
+}
