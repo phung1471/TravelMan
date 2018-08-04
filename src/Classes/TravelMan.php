@@ -101,9 +101,9 @@ class TravelMan {
 	/**
 	 * @return string
 	 */
-	protected function getClosestCities() {
+	protected function findShortestPath() {
 		$arrKeys = array_keys($this->cityList);
-		if (count($arrKeys) == 1) return  ' -> ' . $arrKeys[0];
+		if (count($arrKeys) == 1) return  $arrKeys[0];
 
 		$listDistance = $this->listDistance();
 		$closestCity = array_keys($listDistance, min($listDistance), '===')[0];
@@ -111,7 +111,7 @@ class TravelMan {
         $this->startPoint[$closestCity] = $this->cityList[$closestCity];
 		unset($this->cityList[$closestCity]);
 
-		$this->shortestPath = $closestCity . $this->getClosestCities() . ' -> ' . $this->shortestPath;
+		return $closestCity . ' -> ' . $this->findShortestPath();
 	}
 
 	/**
@@ -131,7 +131,7 @@ class TravelMan {
 	 * @return string
 	 */
 	public function getShortestPath() {
-		$this->getClosestCities();
+		$this->shortestPath = key($this->startPoint) . ' -> ' . $this->findShortestPath();
 		return $this->shortestPath;
 	}
 
