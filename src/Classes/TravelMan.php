@@ -66,7 +66,7 @@ class TravelMan {
 
 			fclose($handle);
 		} catch (\Exception $e) {
-			$this->errMessage .= "<p>$e</p>";
+			$this->errMessage .= '<p>' . $e->getMessage() . '</p>';
 		}
 	}
 
@@ -117,8 +117,9 @@ class TravelMan {
 	 */
 	protected function listDistance() {
 		$listDistance = [];
+		$startPointName = key($this->startPoint);
 		foreach ($this->cityList as $name => $data) {
-			$listDistance[$name] = Helper::calcDistance($this->startPoint, $this->cityList[$name]);
+			$listDistance[$name] = Helper::calcDistance($this->startPoint[$startPointName], $this->cityList[$name]);
 		}
 
 		return $listDistance;
