@@ -1,6 +1,4 @@
 <?php
-require_once 'process.php';
-
 /**
  * @var $travelMan \App\Classes\TravelMan
  */
@@ -44,7 +42,7 @@ require_once 'process.php';
 <div class="shortest-path">
   <h3>The Shortest Path</h3>
   <p>Start Point: <?php echo $travelMan->getStartPoint() ?></p>
-  <p><?php echo $travelMan->getStartPoint() . $travelMan->getShortestPath()  ?></p>
+  <p><?php echo $travelMan->getStartPoint() . ' -> ' . $travelMan->getShortestPath()  ?></p>
 </div>
 <?php endif; ?>
 

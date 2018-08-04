@@ -106,10 +106,12 @@ class TravelMan {
 		if (count($arrKeys) == 1) return  ' -> ' . $arrKeys[0];
 
 		$listDistance = $this->listDistance();
-		$closestCity = array_keys($listDistance, min($listDistance))[0];
+		$closestCity = array_keys($listDistance, min($listDistance), '===')[0];
+        $this->startPoint = [];
+        $this->startPoint[$closestCity] = $this->cityList[$closestCity];
 		unset($this->cityList[$closestCity]);
 
-		$this->shortestPath .= ' -> ' . $closestCity . $this->getClosestCities();
+		$this->shortestPath = $closestCity . $this->getClosestCities() . ' -> ' . $this->shortestPath;
 	}
 
 	/**

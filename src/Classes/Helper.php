@@ -15,10 +15,10 @@ class Helper {
 	 * @return float
 	 */
 	public static function calcDistance(array $city1, array $city2, $unit = 'k') {
-		$lon1 = $city1['longitude'];
-		$lat1 = $city1['latitude'];
-		$lon2 = $city2['longitude'];
-		$lat2 = $city2['latitude'];
+		$lon1 = (float) $city1['longitude'];
+		$lat1 = (float) $city1['latitude'];
+		$lon2 = (float) $city2['longitude'];
+		$lat2 = (float) $city2['latitude'];
 
 		$theta = $lon1 - $lon2;
 		$dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));

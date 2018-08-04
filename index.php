@@ -14,4 +14,4 @@ HTML;
 	exit(1);
 }
 
-require_once __DIR__ . '/src/template.php';
+require_once __DIR__ . '/src/process.php';
